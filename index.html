@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prospecta Build X - Premium Real Estate Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts Preconnect and Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Limelight&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0D0D30",
+              purple: "#8B9EB2",
+              cream: "#FFF7E6",
+              beige: "#D0E6FD",
+              gold: "#3E3232",
+            },
+            fontFamily: {
+              italiana: ["Italiana", "serif"],
+              limelight: ["Limelight", "cursive"],
+              nunito: ["Nunito", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .hero-slider {
+        background-size: cover;
+        background-position: center;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .mobile-menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+
+      .scroll-container {
+        animation: scroll 20s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream">
+    <!-- Top Header -->
+    <div class="bg-navy text-white py-2 px-4">
+      <div class="container mx-auto flex justify-between items-center text-sm">
+        <div class="flex space-x-4">
+          <span><i class="fas fa-envelope mr-2"></i>info@eliterealty.com</span>
+          <span><i class="fas fa-phone mr-2"></i>+91 98765 43210</span>
+        </div>
+        <div class="flex space-x-3">
+          <a href="#" class="hover:text-beige"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="hover:text-beige"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="hover:text-beige"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-5">
+          <!-- Logo -->
+          <div class="relative inline-block flex items-center">
+            <img
+              src="images/logo.png"
+              alt="Prospecta Build X Logo"
+              class="h-32 w-auto object-contain -my-8"
+            />
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex space-x-8">
+            <a href="#home" class="text-navy hover:text-purple font-medium"
+              >Home</a
+            >
+            <a href="#about" class="text-navy hover:text-purple font-medium"
+              >About</a
+            >
+            <a href="#projects" class="text-navy hover:text-purple font-medium"
+              >Projects</a
+            >
+            <a href="#awards" class="text-navy hover:text-purple font-medium"
+              >Awards & Gallery</a
+            >
+            <a href="#contact" class="text-navy hover:text-purple font-medium"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="lg:hidden text-navy" id="mobile-menu-btn">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white shadow-lg z-50 lg:hidden"
+        id="mobile-menu"
+      >
+        <div class="p-4">
+          <div class="flex justify-between items-center mb-8">
+            <img
+              src="images/logo.png"
+              alt="Prospecta Build X Logo"
+              class="h-20 w-auto object-contain"
+            />
+            <button id="close-menu-btn" class="text-navy">
+              <i class="fas fa-times text-2xl"></i>
+            </button>
+          </div>
+          <div class="space-y-4">
+            <a
+              href="#home"
+              class="block text-navy hover:text-purple font-medium py-2"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="block text-navy hover:text-purple font-medium py-2"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="block text-navy hover:text-purple font-medium py-2"
+              >Projects</a
+            >
+            <a
+              href="#awards"
+              class="block text-navy hover:text-purple font-medium py-2"
+              >Awards & Gallery</a
+            >
+            <a
+              href="#contact"
+              class="block text-navy hover:text-purple font-medium py-2"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[100vh] overflow-hidden">
+      <div class="hero-slider absolute inset-0" id="hero-slider">
+        <!-- Slide 1 -->
+        <div
+          class="slide relative w-full h-screen"
+          style="
+            background-image: url('Images/1.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-gold/90 to-transparent"
+          ></div>
+          <div class="relative z-10 flex items-center h-full px-8">
+            <div class="text-white max-w-xl">
+              <h1
+                class="text-4xl md:text-6xl font-italiana font-extrabold mb-6"
+              >
+                Luxury Living Redefined
+              </h1>
+              <p class="text-lg md:text-2xl font-italiana mb-8">
+                Experience premium residential and commercial spaces
+              </p>
+              <a href="#projects">
+                <button
+                  class="bg-navy hover:bg-cream hover:text-navy text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
+                >
+                  Know More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="slide absolute inset-0 w-full h-screen opacity-0"
+          style="
+            background-image: url('Images/2.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"
+          ></div>
+          <div class="relative z-10 flex items-center h-full px-8">
+            <div class="text-white max-w-xl">
+              <h1
+                class="text-4xl md:text-6xl font-italiana font-extrabold mb-6"
+              >
+                Modern Architecture
+              </h1>
+              <p class="text-lg md:text-2xl font-italiana mb-8">
+                Innovative designs for contemporary living
+              </p>
+              <a href="#projects">
+                <button
+                  class="bg-navy hover:bg-cream hover:text-navy text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
+                >
+                  Know More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="slide absolute inset-0 w-full h-screen opacity-0"
+          style="
+            background-image: url('Images/3.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"
+          ></div>
+          <div class="relative z-10 flex items-center h-full px-8">
+            <div class="text-white max-w-xl">
+              <h1
+                class="text-4xl md:text-6xl font-italiana font-extrabold mb-6"
+              >
+                Prime Locations
+              </h1>
+              <p class="text-lg md:text-2xl font-italiana mb-8">
+                Homes built at strategic and convenient spots
+              </p>
+              <a href="#projects">
+                <button
+                  class="bg-navy hover:bg-cream hover:text-navy text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
+                >
+                  Know More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dot Navigation -->
+        <div
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20"
+        >
+          <button
+            class="dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition duration-300"
+            data-slide="0"
+          ></button>
+          <button
+            class="dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition duration-300"
+            data-slide="1"
+          ></button>
+          <button
+            class="dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition duration-300"
+            data-slide="2"
+          ></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-12 px-4 sm:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="flex justify-center md:justify-start">
+            <div class="relative">
+              <img
+                src="Images/05.jpg"
+                alt="50 Years"
+                class="w-90 h-90 object-contain z-10 relative"
+              />
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-center gap-4">
+              <div class="flex flex-col items-end">
+                <span class="w-20 h-[2px] bg-navy mb-1"></span>
+                <span class="w-10 h-[1px] bg-navy"></span>
+              </div>
+              <h2
+                class="text-2xl md:text-5xl font-italiana font-extrabold text-navy"
+              >
+                Our Legacy
+              </h2>
+              <div class="flex flex-col items-start">
+                <span class="w-20 h-[2px] bg-navy mb-1"></span>
+                <span class="w-10 h-[1px] bg-navy"></span>
+              </div>
+            </div>
+            <p
+              class="text-navy text-base leading-relaxed text-center md:text-left"
+            >
+              <strong class="text-navy"
+                >Your Trusted Partner in Innovative Construction
+                Solutions</strong
+              >
+              <br />At PBIPL, we take immense pride in being a reliable and
+              forward-thinking partner in the construction industry. With a
+              strong foundation built on trust, quality, and innovation, we
+              deliver high-standard solutions tailored to meet the evolving
+              needs of our clients.
+            </p>
+            <p
+              class="text-navy text-base leading-relaxed text-center md:text-left"
+            >
+              Our expertise lies in Engineering, Procurement, and Construction
+              (EPC) services, where we seamlessly integrate cutting-edge
+              technologies with industry best practices. Whether it's an
+              Industrial facility, a Commercial space, or a Residential
+              development, we approach each project with a commitment to
+              precision, safety, and sustainability.
+            </p>
+          </div>
+        </div>
+        <div class="pt-6 border-t border-purple-100">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div
+              class="p-4 text-center flex flex-col items-center justify-center"
+            >
+              <h3
+                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
+                data-target="100"
+              >
+                100+
+              </h3>
+              <p
+                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
+              >
+                Buildings
+              </p>
+            </div>
+            <div
+              class="p-4 text-center flex flex-col items-center justify-center"
+            >
+              <h3
+                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
+                data-target="20"
+              >
+                20M+
+              </h3>
+              <p
+                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
+              >
+                Sq.Ft
+              </p>
+            </div>
+            <div
+              class="p-4 text-center flex flex-col items-center justify-center"
+            >
+              <h3
+                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
+                data-target="47"
+              >
+                47+
+              </h3>
+              <p
+                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
+              >
+                Awards
+              </p>
+            </div>
+            <div
+              class="p-4 text-center flex flex-col items-center justify-center"
+            >
+              <h3
+                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
+                data-target="12"
+              >
+                12K+
+              </h3>
+              <p
+                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
+              >
+                Residents
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="py-16 bg-gray-80">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex flex-col items-end">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+            <h2 class="text-4xl font-extrabold font-italiana text-navy">
+              Our Portfolio
+            </h2>
+            <div class="flex flex-col items-start">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+          </div>
+          <p class="text-navy font-nunito max-w-2xl mx-auto mt-4">
+            Explore our curated selection of premium developments
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center mb-12 gap-2">
+          <button
+            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-navy text-white shadow-md hover:shadow-lg"
+            data-filter="all"
+          >
+            All Projects
+          </button>
+          <button
+            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
+            data-filter="completed"
+          >
+            Completed
+          </button>
+          <button
+            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
+            data-filter="upcoming"
+          >
+            Upcoming
+          </button>
+          <button
+            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
+            data-filter="recent"
+          >
+            Recent
+          </button>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="project-gallery"
+        >
+          <div
+            class="project-item group relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl"
+            data-category="completed"
+          >
+            <div class="h-96 overflow-hidden">
+              <img
+                src="Images/proj1.jpeg"
+                alt="Elite Heights"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+            >
+              <div
+                class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+              >
+                <h3 class="text-xl font-extrabold text-white mb-2">
+                  Elite Heights
+                </h3>
+                <p class="text-gray-200 mb-4">
+                  Luxury residential complex with modern amenities
+                </p>
+                <button
+                  class="bg-purple hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  View Project <span class="ml-2">→</span>
+                </button>
+              </div>
+            </div>
+            <div class="absolute top-4 left-4">
+              <h3 class="text-lg font-semibold text-gray-600 drop-shadow-md">
+                Elite Heights
+              </h3>
+            </div>
+          </div>
+          <div
+            class="project-item group relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl"
+            data-category="completed"
+          >
+            <div class="h-96 overflow-hidden">
+              <img
+                src="Images/proj2.jpeg"
+                alt="Royal Plaza"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+            >
+              <div
+                class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+              >
+                <h3 class="text-xl font-extrabold text-white mb-2">
+                  Royal Plaza
+                </h3>
+                <p class="text-gray-200 mb-4">
+                  Premium commercial space in prime location
+                </p>
+                <button
+                  class="bg-purple hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  View Project <span class="ml-2">→</span>
+                </button>
+              </div>
+            </div>
+            <div class="absolute top-4 left-4">
+              <h3 class="text-lg font-semibold text-gray-600 drop-shadow-md">
+                Royal Plaza
+              </h3>
+            </div>
+          </div>
+          <div
+            class="project-item group relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl"
+            data-category="upcoming"
+          >
+            <div class="h-96 overflow-hidden">
+              <img
+                src="Images/proj3.jpeg"
+                alt="Future City"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+            >
+              <div
+                class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+              >
+                <h3 class="text-2xl font-extrabold text-white mb-2">
+                  Future City
+                </h3>
+                <p class="text-gray-200 mb-4">
+                  Smart city project with advanced technology
+                </p>
+                <button
+                  class="bg-purple hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  View Project <span class="ml-2">→</span>
+                </button>
+              </div>
+            </div>
+            <div class="absolute top-4 left-4">
+              <h3 class="text-lg font-semibold text-gray-600 drop-shadow-md">
+                Future City
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="#projects">
+            <button
+              class="px-8 py-3 bg-white text-navy border-2 border-navy rounded-full font-medium hover:bg-navy hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
+            >
+              View All Projects
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex flex-col items-end">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+            <h2 class="text-4xl font-bold font-italiana text-navy">
+              Why Choose Prospecta Build X
+            </h2>
+            <div class="flex flex-col items-start">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+          </div>
+          <p class="text-gray-600 font-nunito max-w-2xl mx-auto mt-4">
+            We deliver excellence through innovation, quality, and
+            customer-centric approach
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="bg-purple/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-award text-purple text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+              Quality Construction
+            </h3>
+            <p class="text-gray-600">
+              Premium materials and superior craftsmanship in every project
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-purple/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-clock text-purple text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+              Timely Delivery
+            </h3>
+            <p class="text-gray-600">
+              Committed to delivering projects on schedule without compromise
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-purple/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-handshake text-purple text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+              Customer Support
+            </h3>
+            <p class="text-gray-600">
+              24/7 customer service and after-sales support
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-purple/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-leaf text-purple text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+              Eco-Friendly
+            </h3>
+            <p class="text-gray-600">
+              Sustainable construction practices and green building solutions
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- X-Factor Section -->
+    <section
+      id="x-factor"
+      class="relative py-16 text-white bg-cover bg-center bg-no-repeat"
+      style="background-image: url('Images/bg1.jpeg')"
+    >
+      <div class="absolute inset-0 bg-gold/80 z-0"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex flex-col items-end">
+              <span class="w-20 h-[2px] bg-cream mb-1"></span>
+              <span class="w-10 h-[1px] bg-white"></span>
+            </div>
+            <h2 class="text-4xl font-bold font-italiana text-white">
+              The Prospecta Build X-Factor
+            </h2>
+            <div class="flex flex-col items-start">
+              <span class="w-20 h-[2px] bg-cream mb-1"></span>
+              <span class="w-10 h-[1px] bg-white"></span>
+            </div>
+          </div>
+          <p class="text-xl max-w-3xl font-nunito mx-auto mt-4 text-white/90">
+            What sets us apart in the competitive real estate landscape
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div
+              class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-lightbulb text-cream text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold font-italiana mb-4">
+              Innovation
+            </h3>
+            <p class="text-white/90">
+              Cutting-edge design and smart home technology integration
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-shield-alt text-cream text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold font-italiana mb-4">
+              Sustainability
+            </h3>
+            <p class="text-white/90">
+              LEED certified buildings with renewable energy solutions
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-users text-cream text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold font-italiana mb-4">Community</h3>
+            <p class="text-white/90">
+              Building communities that foster connection and well-being
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Gallery Preview -->
+    <section id="awards" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <span
+            class="text-navy uppercase tracking-wider font-medium mb-2 block"
+          >
+            Our Achievements
+          </span>
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex flex-col items-end">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+            <h2 class="text-4xl font-bold font-italiana text-navy">
+              Awards and Recognition
+            </h2>
+            <div class="flex flex-col items-start">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="relative mb-16">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8">
+            <!-- Card 1 -->
+            <div
+              class="bg-[#0D0D30] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-gold transform hover:-translate-y-2"
+            >
+              <div class="flex items-center mb-6">
+                <div
+                  class="bg-purple/20 w-14 h-14 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-trophy text-beige text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-sm text-purple">2023 Winner</span>
+                  <h3 class="text-xl font-bold text-white">Best Developer</h3>
+                </div>
+              </div>
+              <p class="text-gray-200 mb-4">
+                Recognized for excellence in innovative residential developments
+                at the Real Estate Excellence Awards
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-gray-400">June 2023</span>
+                <!-- <button
+                  class="text-beige hover:text-beige-dark text-sm font-medium"
+                >
+                  Read More →
+                </button> -->
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-[#0D0D30] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-gold transform hover:-translate-y-2"
+            >
+              <div class="flex items-center mb-6">
+                <div
+                  class="bg-purple/20 w-14 h-14 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-medal text-beige text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-sm text-purple"
+                    >Platinum Certification</span
+                  >
+                  <h3 class="text-xl font-bold text-white">
+                    Green Building Award
+                  </h3>
+                </div>
+              </div>
+              <p class="text-gray-200 mb-4">
+                Honored by the Sustainable Construction Council for our
+                eco-friendly high-rise projects
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-gray-400">March 2023</span>
+                <!-- <button
+                  class="text-beige hover:text-beige-dark text-sm font-medium"
+                >
+                  Read More →
+                </button> -->
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-[#0D0D30] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-gold transform hover:-translate-y-2"
+            >
+              <div class="flex items-center mb-6">
+                <div
+                  class="bg-purple/20 w-14 h-14 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-star text-beige text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-sm text-purple">5-Star Rating</span>
+                  <h3 class="text-xl font-bold text-white">Customer Choice</h3>
+                </div>
+              </div>
+              <p class="text-gray-200 mb-4">
+                Voted by residents as the most trusted developer in the Property
+                Buyers Association survey
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-gray-400">January 2024</span>
+                <!-- <button
+                  class="text-beige hover:text-beige-dark text-sm font-medium"
+                >
+                  Read More →
+                </button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-semibold font-italiana text-navy mb-2">
+            Celebrating Our Success
+          </h3>
+          <p class="text-navy font-nunito max-w-2xl mx-auto">
+            Moments from our award ceremonies and project milestones
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Gallery images (unchanged) -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1973&q=80"
+              alt="Award Ceremony"
+              class="w-full h-48 object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+            >
+              <span class="text-white font-medium">2023 Awards Gala</span>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2070&q=80"
+              alt="Project Site"
+              class="w-full h-48 object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+            >
+              <span class="text-white font-medium">Elite Heights Project</span>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2070&q=80"
+              alt="Team Celebration"
+              class="w-full h-48 object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+            >
+              <span class="text-white font-medium">Team Celebration</span>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=2070&q=80"
+              alt="Green Certification"
+              class="w-full h-48 object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+            >
+              <span class="text-white font-medium">Sustainability Award</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center mt-12">
+          <button
+            class="px-8 py-3 bg-navy text-white rounded-full font-medium hover:bg-navy-dark transition-all duration-300 shadow-md hover:shadow-lg flex items-center mx-auto"
+          >
+            View All Awards
+            <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="py-16 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex flex-col items-end">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+            <h2 class="text-4xl font-bold font-italiana text-navy">
+              Our Trusted Partners
+            </h2>
+            <div class="flex flex-col items-start">
+              <span class="w-20 h-[2px] bg-navy mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+          </div>
+          <p class="text-navy mt-4">
+            Working with industry leaders to deliver excellence
+          </p>
+        </div>
+        <div class="relative">
+          <div class="flex space-x-12 scroll-container">
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 1</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 2</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 3</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 4</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 5</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 6</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 1</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 2</span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-6 w-48 h-24 flex items-center justify-center"
+            >
+              <span class="text-gray-600 font-bold">Partner 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex flex-col items-end">
+              <span class="w-20 h-[2px] bg-gold mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+            <h2 class="text-4xl font-bold font-italiana text-navy">
+              Contact Us
+            </h2>
+            <div class="flex flex-col items-start">
+              <span class="w-20 h-[2px] bg-gold mb-1"></span>
+              <span class="w-10 h-[1px] bg-navy"></span>
+            </div>
+          </div>
+          <p class="text-navy font-nunito max-w-2xl mx-auto mt-4">
+            Get in touch with us for inquiries or project details
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-navy">Contact Info</h3>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-3 text-purple"></i>
+                <span class="text-navy">123 Business District, Metro City</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone mr-3 text-purple"></i>
+                <span class="text-navy">+91 98765 43210</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-purple"></i>
+                <span class="text-navy">info@eliterealty.com</span>
+              </div>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-xl font-bold mb-4 text-navy">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-navy hover:text-gold">
+                  <i class="fab fa-facebook text-xl"></i>
+                </a>
+                <a href="#" class="text-navy hover:text-gold">
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-navy hover:text-gold">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-navy hover:text-gold">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+     <div>
+  <h3 class="text-xl font-bold mb-4 text-navy">Send Us a Message</h3>
+  <form id="contact-form" class="space-y-4">
+    <input
+      type="text"
+      name="user_name"
+      placeholder="Your Name"
+      class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple"
+      required
+    />
+    <input
+      type="email"
+      name="user_email"
+      placeholder="Your Email"
+      class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple"
+      required
+    />
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple h-32"
+      required
+    ></textarea>
+    <button
+      type="submit"
+      class="bg-navy text-white px-6 py-3 rounded-lg font-medium hover:bg-gold transition duration-300"
+    >
+      Send Message
+    </button>
+  </form>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="text-2xl font-bold mb-4">
+              Prospecta <span class="text-cream">Build X</span>
+            </div>
+            <p class="text-white/80 mb-4">
+              Building dreams, creating communities, and delivering excellence
+              in real estate development.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white/80 hover:text-gold"
+                ><i class="fab fa-facebook text-xl"></i
+              ></a>
+              <a href="#" class="text-white/80 hover:text-gold"
+                ><i class="fab fa-instagram text-xl"></i
+              ></a>
+              <a href="#" class="text-white/80 hover:text-gold"
+                ><i class="fab fa-linkedin text-xl"></i
+              ></a>
+              <a href="#" class="text-white/80 hover:text-gold"
+                ><i class="fab fa-twitter text-xl"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="text-white/80 hover:text-gold">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="text-white/80 hover:text-gold">About</a>
+              </li>
+              <li>
+                <a href="#projects" class="text-white/80 hover:text-gold"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a href="#awards" class="text-white/80 hover:text-gold"
+                  >Awards & Gallery</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-white/80 hover:text-gold"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-white/80 hover:text-gold"
+                  >Residential Development</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/80 hover:text-gold"
+                  >Commercial Projects</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/80 hover:text-gold"
+                  >Property Management</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/80 hover:text-gold"
+                  >Investment Advisory</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-3"></i>
+                <span class="text-white/80"
+                  >123 Business District, Metro City</span
+                >
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone mr-3"></i>
+                <span class="text-white/80">+91 98765 43210</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-3"></i>
+                <span class="text-white/80">info@eliterealty.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/20 mt-8 pt-8 text-center">
+          <p class="text-white/80">
+            &copy; 2025 Prospecta Build X. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("lS4NzGusbDkqQQqdu"); // ✅ Your Public Key
+  })();
+</script>
+<script src="script.js"></script>
+
+  </body>
+</html>
