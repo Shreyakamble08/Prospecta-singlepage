@@ -59,7 +59,7 @@
             if (slideInterval) {
                 clearInterval(slideInterval);
             }
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 3000);
         }
 
         dots.forEach((dot, index) => {
