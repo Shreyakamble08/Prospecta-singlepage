@@ -92,7 +92,8 @@
             filterTabs.forEach(tab => {
                 tab.addEventListener('click', function () {
                     filterTabs.forEach(t => t.classList.remove('bg-navy', 'text-white'));
-                    this.classList.add('bg-navy', 'text-white');
+                    this.classList.add('bg-navy', 'text-gray-700', 'font-bold', 'border-2', 'border-beige', 'shadow-lg');
+
                     const filter = this.getAttribute('data-filter');
                     projectItems.forEach(item => {
                         if (filter === 'all' || item.getAttribute('data-category') === filter) {

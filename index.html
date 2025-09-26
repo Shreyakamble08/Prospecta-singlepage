@@ -312,7 +312,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-white py-12 px-4 sm:px-8">
+    <section id="about" class="bg-white pt-6 pb-12 px-4 sm:px-8">
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div class="flex justify-center md:justify-start">
@@ -433,7 +433,7 @@
     </section>
 
     <!-- Featured Projects -->
-    <section id="projects" class="py-16 bg-gray-80">
+    <section id="projects" class="pt-8 pb-16 bg-gray-80">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <div class="flex items-center justify-center gap-4">
@@ -686,10 +686,24 @@
     <!-- X-Factor Section -->
     <section
       id="x-factor"
-      class="relative py-16 text-white bg-cover bg-center bg-no-repeat"
-      style="background-image: url('Images/bg1.jpeg')"
+      class="relative py-16 text-white bg-center bg-no-repeat overflow-hidden"
     >
-      <div class="absolute inset-0 bg-gold/80 z-0"></div>
+      <!-- Background Video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="./Images/foundation.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-navy/50 z-0"></div>
+
+      <!-- Content -->
       <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-12">
           <div class="flex items-center justify-center gap-4">
@@ -709,6 +723,7 @@
             What sets us apart in the competitive real estate landscape
           </p>
         </div>
+
         <div class="grid md:grid-cols-3 gap-8">
           <div class="text-center">
             <div
@@ -791,7 +806,9 @@
                 </div>
                 <div>
                   <span class="text-xs text-purple">2023 Winner</span>
-                  <h3 class="text-lg font-bold text-white">CONNECT 3.0 KOHINOOR</h3>
+                  <h3 class="text-lg font-bold text-white">
+                    CONNECT 3.0 KOHINOOR
+                  </h3>
                 </div>
               </div>
               <p class="text-gray-200 text-sm mb-3 leading-snug">
@@ -812,9 +829,7 @@
                   <i class="fas fa-medal text-beige text-xl"></i>
                 </div>
                 <div>
-                  <span class="text-xs text-purple"
-                    >2022 Winner</span
-                  >
+                  <span class="text-xs text-purple">2022 Winner</span>
                   <h3 class="text-lg font-bold text-white">
                     BLINDWINK GLOBAL ICON AWARD
                   </h3>
@@ -837,13 +852,12 @@
                   <i class="fas fa-star text-beige text-xl"></i>
                 </div>
                 <div>
-                  <span class="text-xs text-purple">5-Star Rating</span>
-                  <h3 class="text-lg font-bold text-white">Customer Choice</h3>
+                  <span class="text-xs text-purple"> KOHINOOR</span>
+                  <h3 class="text-lg font-bold text-white">CONNECT 2.0</h3>
                 </div>
               </div>
               <p class="text-gray-200 text-sm mb-3 leading-snug">
-                Voted by residents as the most trusted developer in the Property
-                Buyers Association survey
+                Biggest Value of Work Order Awards
               </p>
               <span class="text-xs text-gray-400">January 2024</span>
             </div>
@@ -853,7 +867,7 @@
     </section>
 
     <!-- Clients Section -->
-    <section id="clients" class="py-16 bg-gray-50 overflow-hidden">
+    <section id="clients" class="py-16 bg-gray-50 overflow-hidden -mt-8">
       <div class="container mx-auto px-4">
         <!-- Section Heading -->
         <div class="text-center mb-12">
@@ -973,7 +987,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="pt-8 pb-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <div class="flex items-center justify-center gap-4">
@@ -998,41 +1012,46 @@
             <h3 class="text-xl font-bold mb-4 text-navy">Contact Info</h3>
             <div class="space-y-3">
               <div class="flex items-center">
-                <i class="fas fa-map-marker-alt mr-3 text-purple"></i>
-                <span class="text-navy">PUNE OFFICE
- C-803, AMAR BUSINESS ZONE,
- BANER, PUNE-411045</span>
+                <i class="fas fa-map-marker-alt mr-3 text-navy"></i>
+                <a
+                  href="https://maps.app.goo.gl/bYewAzbBrubnYdRb6"
+                  target="_blank"
+                  class="text-navy hover:underline"
+                >
+                  PUNE OFFICE C-803, AMAR BUSINESS ZONE, BANER, PUNE-411045
+                </a>
               </div>
+
               <div class="flex items-center">
-                <i class="fas fa-phone mr-3 text-purple"></i>
+                <i class="fas fa-phone mr-3 text-navy"></i>
                 <span class="text-navy">+91 95495 43838 </span>
               </div>
               <div class="flex items-center">
-                <i class="fas fa-envelope mr-3 text-purple"></i>
+                <i class="fas fa-envelope mr-3 text-navy"></i>
                 <span class="text-navy">info@prospectabuildx.com</span>
               </div>
             </div>
             <div class="mt-6">
               <h3 class="text-xl font-bold mb-4 text-navy">Follow Us</h3>
               <div class="flex space-x-4">
-               <a
-                href="https://www.facebook.com/prospectabuildx"
-                class="text-white/80 hover:text-beige"
-              >
-                <i class="fab fa-facebook text-xl"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/prospectabuildx/"
-                class="text-white/80 hover:text-beige"
-              >
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/prospectabuildx/"
-                class="text-white/80 hover:text-beige"
-              >
-                <i class="fab fa-linkedin text-xl"></i>
-              </a>
+                <a
+                  href="https://www.facebook.com/prospectabuildx"
+                  class="text-white/80 hover:text-beige"
+                >
+                  <i class="fab fa-facebook text-navy text-xl"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/prospectabuildx/"
+                  class="text-white/80 hover:text-beige"
+                >
+                  <i class="fab fa-instagram text-navy text-xl"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/prospectabuildx/"
+                  class="text-white/80 hover:text-beige"
+                >
+                  <i class="fab fa-linkedin text-navy text-xl"></i>
+                </a>
                 <!-- <a href="#" class="text-navy hover:text-gold">
                   <i class="fab fa-twitter text-xl"></i>
                 </a> -->
@@ -1065,7 +1084,7 @@
               ></textarea>
               <button
                 type="submit"
-                class="bg-navy text-white px-6 py-3 rounded-lg font-medium hover:bg-gold transition duration-300"
+                class="bg-navy text-white px-6 py-3 rounded-lg font-medium hover:bg-beige hover:text-navy transition duration-300"
               >
                 Send Message
               </button>
@@ -1179,12 +1198,17 @@
             <h3 class="text-xl font-bold mb-6">Contact Info</h3>
             <div class="space-y-4">
               <div class="flex items-center">
-                <i class="fas fa-map-marker-alt mr-3"></i>
-                <span class="text-white/80">
-                  PUNE OFFICE C-803, AMAR BUSINESS ZONE, BANER,
-                  PUNE-411045</span
+                <i class="fas fa-map-marker-alt mr-3 text-white"></i>
+                <a
+                  href="https://maps.app.goo.gl/bYewAzbBrubnYdRb6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:underline"
                 >
+                  PUNE OFFICE C-803, AMAR BUSINESS ZONE, BANER, PUNE-411045
+                </a>
               </div>
+
               <div class="flex items-center">
                 <i class="fas fa-phone mr-3"></i>
                 <span class="text-white/80">+91 95495 43838</span>
