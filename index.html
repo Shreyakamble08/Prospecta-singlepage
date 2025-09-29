@@ -67,15 +67,25 @@
           transform: translateX(-50%);
         }
       }
+
+      /* Prevent horizontal overflow */
+      html,
+      body {
+        overflow-x: hidden;
+      }
     </style>
   </head>
 
   <body class="bg-cream">
     <!-- Top Header -->
     <div class="bg-navy text-white py-2 px-4">
-      <div class="container mx-auto flex justify-between items-center text-sm">
+      <div
+        class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-2 sm:space-y-0"
+      >
         <!-- Contact Info -->
-        <div class="flex space-x-6">
+        <div
+          class="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6"
+        >
           <a
             href="mailto:info@prospectabuildx.com"
             class="hover:text-beige flex items-center"
@@ -88,9 +98,8 @@
           >
             <i class="fas fa-phone mr-2"></i> +91 95495 43838
           </a>
-
           <a
-            href="tel:+91 89562 29547"
+            href="tel:+918956229547"
             class="hover:text-beige flex items-center"
           >
             <i class="fas fa-phone mr-2"></i> +91 89562 29547
@@ -133,7 +142,7 @@
             <img
               src="Images/logo.png"
               alt="Prospecta Build X Logo"
-              class="h-32 w-auto object-contain -my-8"
+              class="h-24 w-auto object-contain -my-4"
             />
           </div>
 
@@ -211,11 +220,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-[100vh] overflow-hidden">
+    <section id="home" class="relative h-screen overflow-hidden">
       <div class="hero-slider absolute inset-0" id="hero-slider">
         <!-- Slide 1 -->
         <div
-          class="slide relative w-full h-screen"
+          class="slide relative w-full h-full"
           style="
             background-image: url('./Images/1banner.png');
             background-size: cover;
@@ -225,32 +234,36 @@
           <div
             class="absolute inset-0 bg-gradient-to-r from-navy/70 to-transparent"
           ></div>
-          <div class="relative z-10 flex items-center h-full px-8">
-            <div class="text-white max-w-xl">
+          <div class="relative z-10 flex items-center h-full px-4 sm:px-8">
+            <div class="text-white max-w-xl mx-auto sm:mx-0">
               <h1
-                class="text-4xl md:text-6xl font-italiana font-extrabold mb-6"
+                class="text-3xl sm:text-4xl md:text-5xl font-italiana font-extrabold mb-6 text-center sm:text-left"
               >
                 Industrial Construction
               </h1>
-              <p class="text-lg md:text-2xl font-italiana mb-8">
+              <p
+                class="text-base sm:text-lg md:text-xl font-italiana mb-8 text-center sm:text-left"
+              >
                 subtitle for industrial construction
               </p>
-              <a href="#projects">
-                <button
-                  class="bg-navy hover:bg-cream hover:text-navy text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
-                >
-                  Know More
-                </button>
-              </a>
+              <div class="text-center sm:text-left">
+                <a href="#projects">
+                  <button
+                    class="bg-navy hover:bg-cream hover:text-navy text-white px-6 py-2 rounded-lg font-semibold transition duration-300"
+                  >
+                    Know More
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Slide 2 -->
         <div
-          class="slide absolute inset-0 w-full h-screen opacity-0"
+          class="slide absolute inset-0 w-full h-full opacity-0"
           style="
-            background-image: url('./Images/banner2\ \(1\).jpeg');
+            background-image: url('./Images/banner2 (1).jpeg');
             background-size: cover;
             background-position: center;
           "
@@ -258,30 +271,34 @@
           <div
             class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"
           ></div>
-          <div class="relative z-10 flex items-center h-full px-8">
-            <div class="text-white max-w-xl">
+          <div class="relative z-10 flex items-center h-full px-4 sm:px-8">
+            <div class="text-white max-w-xl mx-auto sm:mx-0">
               <h1
-                class="text-4xl md:text-6xl font-italiana font-extrabold mb-6"
+                class="text-3xl sm:text-4xl md:text-5xl font-italiana font-extrabold mb-6 text-center sm:text-left"
               >
                 Modern Architecture
               </h1>
-              <p class="text-lg md:text-2xl font-italiana mb-8">
+              <p
+                class="text-base sm:text-lg md:text-xl font-italiana mb-8 text-center sm:text-left"
+              >
                 Innovative designs for contemporary living
               </p>
-              <a href="#projects">
-                <button
-                  class="bg-navy hover:bg-cream hover:text-navy text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
-                >
-                  Know More
-                </button>
-              </a>
+              <div class="text-center sm:text-left">
+                <a href="#projects">
+                  <button
+                    class="bg-navy hover:bg-cream hover:text-navy text-white px-6 py-2 rounded-lg font-semibold transition duration-300"
+                  >
+                    Know More
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Slide 3 -->
         <div
-          class="slide absolute inset-0 w-full h-screen opacity-0"
+          class="slide absolute inset-0 w-full h-full opacity-0"
           style="
             background-image: url('Images/banner3.jpeg');
             background-size: cover;
@@ -291,23 +308,27 @@
           <div
             class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"
           ></div>
-          <div class="relative z-10 flex items-center h-full px-8">
-            <div class="text-white max-w-xl">
+          <div class="relative z-10 flex items-center h-full px-4 sm:px-8">
+            <div class="text-white max-w-xl mx-auto sm:mx-0">
               <h1
-                class="text-4xl md:text-6xl font-italiana font-extrabold mb-6"
+                class="text-3xl sm:text-4xl md:text-5xl font-italiana font-extrabold mb-6 text-center sm:text-left"
               >
                 Prime Locations
               </h1>
-              <p class="text-lg md:text-2xl font-italiana mb-8">
+              <p
+                class="text-base sm:text-lg md:text-xl font-italiana mb-8 text-center sm:text-left"
+              >
                 Homes built at strategic and convenient spots
               </p>
-              <a href="#projects">
-                <button
-                  class="bg-navy hover:bg-cream hover:text-navy text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
-                >
-                  Know More
-                </button>
-              </a>
+              <div class="text-center sm:text-left">
+                <a href="#projects">
+                  <button
+                    class="bg-navy hover:bg-cream hover:text-navy text-white px-6 py-2 rounded-lg font-semibold transition duration-300"
+                  >
+                    Know More
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -333,26 +354,31 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-white pt-6 pb-12 px-4 sm:px-8">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <section id="about" class="bg-white pt-16 pb-16 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <!-- Image Section -->
           <div class="flex justify-center md:justify-start">
             <div class="relative">
               <img
-                src="Images/05.jpg"
-                alt="50 Years"
-                class="w-90 h-90 object-contain z-10 relative"
+                src="Images/x factor.png"
+                alt="X Factor Image"
+                class="w-full max-w-[200px] sm:max-w-[220px] md:max-w-[250px] object-contain"
               />
             </div>
           </div>
-          <div class="space-y-4">
-            <div class="flex items-center justify-center gap-4">
+
+          <!-- Text Section -->
+          <div class="space-y-6">
+            <div
+              class="flex items-center justify-center md:justify-start gap-4"
+            >
               <div class="flex flex-col items-end">
                 <span class="w-20 h-[2px] bg-navy mb-1"></span>
                 <span class="w-10 h-[1px] bg-navy"></span>
               </div>
               <h2
-                class="text-2xl md:text-5xl font-italiana font-extrabold text-navy"
+                class="text-3xl sm:text-4xl md:text-4xl font-italiana font-extrabold text-navy"
               >
                 Our Legacy
               </h2>
@@ -361,100 +387,36 @@
                 <span class="w-10 h-[1px] bg-navy"></span>
               </div>
             </div>
+
             <p
-              class="text-navy text-base leading-relaxed text-center md:text-left"
+              class="text-navy text-sm sm:text-base leading-relaxed text-center md:text-left"
             >
-              <strong class="text-navy"
+              <strong
                 >Your Trusted Partner in Innovative Construction
                 Solutions</strong
-              >
-              <br />At PBIPL, we take immense pride in being a reliable and
-              forward-thinking partner in the construction industry. With a
-              strong foundation built on trust, quality, and innovation, we
-              deliver high-standard solutions tailored to meet the evolving
-              needs of our clients.
+              ><br />
+              At PBIPL, we take pride in being a reliable and forward-thinking
+              partner in the construction industry. With a foundation built on
+              trust, quality, and innovation, we deliver high-standard solutions
+              tailored to our clients' evolving needs.
             </p>
+
             <p
-              class="text-navy text-base leading-relaxed text-center md:text-left"
+              class="text-navy text-sm sm:text-base leading-relaxed text-center md:text-left"
             >
               Our expertise lies in Engineering, Procurement, and Construction
-              (EPC) services, where we seamlessly integrate cutting-edge
-              technologies with industry best practices. Whether it's an
-              Industrial facility, a Commercial space, or a Residential
-              development, we approach each project with a commitment to
-              precision, safety, and sustainability.
+              (EPC) services, integrating cutting-edge technologies with
+              industry best practices. Whether it's an Industrial facility,
+              Commercial space, or Residential development, we approach each
+              project with precision, safety, and sustainability.
             </p>
           </div>
         </div>
-        <!-- <div class="pt-6 border-t border-purple-100">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            <div
-              class="p-4 text-center flex flex-col items-center justify-center"
-            >
-              <h3
-                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
-                data-target="300"
-              >
-                300+
-              </h3>
-              <p
-                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
-              >
-                Work Order Book
-              </p>
-            </div>
-            <div
-              class="p-4 text-center flex flex-col items-center justify-center"
-            >
-              <h3
-                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
-                data-target="40"
-              >
-                40L+
-              </h3>
-              <p
-                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
-              >
-                40L+ Sq.Ft
-              </p>
-            </div>
-            <div
-              class="p-4 text-center flex flex-col items-center justify-center"
-            >
-              <h3
-                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
-                data-target="50"
-              >
-                50+
-              </h3>
-              <p
-                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
-              >
-                Plants & Machineries
-              </p>
-            </div>
-            <div
-              class="p-4 text-center flex flex-col items-center justify-center"
-            >
-              <h3
-                class="count text-3xl font-bold font-limelight text-navy w-full text-center"
-                data-target="150"
-              >
-                150+
-              </h3>
-              <p
-                class="text-xs text-navy mt-1 uppercase tracking-wider w-full text-center"
-              >
-                Team Size
-              </p>
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
 
     <!-- Featured Projects -->
-    <section id="projects" class="pt-8 pb-16 bg-gray-80">
+    <section id="projects" class="pt-8 pb-16 bg-gray-50">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <div class="flex items-center justify-center gap-4">
@@ -462,7 +424,9 @@
               <span class="w-20 h-[2px] bg-navy mb-1"></span>
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
-            <h2 class="text-4xl font-extrabold font-italiana text-navy">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold font-italiana text-navy"
+            >
               Our Portfolio
             </h2>
             <div class="flex flex-col items-start">
@@ -470,45 +434,47 @@
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
           </div>
-          <p class="text-navy font-nunito max-w-2xl mx-auto mt-4">
+          <p
+            class="text-navy font-nunito max-w-2xl mx-auto mt-4 text-sm sm:text-base"
+          >
             Explore our curated selection of premium developments
           </p>
         </div>
         <div class="flex flex-wrap justify-center mb-12 gap-2">
           <button
-            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-navy text-white shadow-md hover:shadow-lg"
+            class="filter-tab px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium transition-all duration-300 bg-navy text-white shadow-md hover:shadow-lg"
             data-filter="all"
           >
             All Projects
           </button>
           <button
-            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
+            class="filter-tab px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
             data-filter="completed"
           >
             Completed
           </button>
           <button
-            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
+            class="filter-tab px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
             data-filter="upcoming"
           >
             Upcoming
           </button>
           <button
-            class="filter-tab px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
+            class="filter-tab px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium transition-all duration-300 bg-white text-navy shadow-md hover:bg-navy hover:text-white hover:shadow-lg"
             data-filter="recent"
           >
             Recent
           </button>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           id="project-gallery"
         >
           <div
             class="project-item group relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl"
             data-category="completed"
           >
-            <div class="h-96 overflow-hidden">
+            <div class="h-80 sm:h-96 overflow-hidden">
               <img
                 src="Images/completed1.jpg"
                 alt="Elite Heights"
@@ -516,15 +482,16 @@
               />
             </div>
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6"
             >
               <div
                 class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
               >
-                <!-- <h3 class="text-xl font-extrabold text-white mb-2">
+                <!-- Uncomment if needed -->
+                <!-- <h3 class="text-lg sm:text-xl font-extrabold text-white mb-2">
                   Elite Heights
-                </h3> -->
-                <!-- <p class="text-gray-200 mb-4">
+                </h3>
+                <p class="text-gray-200 mb-4 text-sm sm:text-base">
                   Luxury residential complex with modern amenities
                 </p>
                 <button
@@ -534,17 +501,12 @@
                 </button> -->
               </div>
             </div>
-            <!-- <div class="absolute top-4 left-4">
-              <h3 class="text-lg font-semibold text-gray-600 drop-shadow-md">
-                Elite Heights
-              </h3>
-            </div> -->
           </div>
           <div
             class="project-item group relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl"
             data-category="completed"
           >
-            <div class="h-96 overflow-hidden">
+            <div class="h-80 sm:h-96 overflow-hidden">
               <img
                 src="Images/completed2.jpg"
                 alt="Royal Plaza"
@@ -552,15 +514,16 @@
               />
             </div>
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6"
             >
               <div
                 class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
               >
-                <!-- <h3 class="text-xl font-extrabold text-white mb-2">
+                <!-- Uncomment if needed -->
+                <!-- <h3 class="text-lg sm:text-xl font-extrabold text-white mb-2">
                   Royal Plaza
-                </h3> -->
-                <!-- <p class="text-gray-200 mb-4">
+                </h3>
+                <p class="text-gray-200 mb-4 text-sm sm:text-base">
                   Premium commercial space in prime location
                 </p>
                 <button
@@ -570,17 +533,12 @@
                 </button> -->
               </div>
             </div>
-            <!-- <div class="absolute top-4 left-4">
-              <h3 class="text-lg font-semibold text-gray-600 drop-shadow-md">
-                Royal Plaza
-              </h3>
-            </div> -->
           </div>
           <div
             class="project-item group relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl"
             data-category="upcoming"
           >
-            <div class="h-96 overflow-hidden">
+            <div class="h-80 sm:h-96 overflow-hidden">
               <img
                 src="Images/completed3.jpg"
                 alt="Future City"
@@ -588,39 +546,36 @@
               />
             </div>
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6"
             >
               <div
                 class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
               >
-                <!-- <h3 class="text-2xl font-extrabold text-white mb-2">
+                <!-- Uncomment if needed -->
+                <!-- <h3 class="text-lg sm:text-xl font-extrabold text-white mb-2">
                   Future City
-                </h3> -->
-                <!-- <p class="text-gray-200 mb-4">
+                </h3>
+                <p class="text-gray-200 mb-4 text-sm sm:text-base">
                   Smart city project with advanced technology
-                </p> -->
-                <!-- <button
+                </p>
+                <button
                   class="bg-purple hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300"
                 >
                   View Project <span class="ml-2">→</span>
                 </button> -->
               </div>
             </div>
-            <!-- <div class="absolute top-4 left-4">
-              <h3 class="text-lg font-semibold text-gray-600 drop-shadow-md">
-                Future City
-              </h3>
-            </div> -->
           </div>
         </div>
         <div class="text-center mt-12">
-          <a href="#projects">
-            <!-- <button
-              class="px-8 py-3 bg-white text-navy border-2 border-navy rounded-full font-medium hover:bg-navy hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
+          <!-- Uncomment if needed -->
+          <!-- <a href="#projects">
+            <button
+              class="px-6 sm:px-8 py-2 sm:py-3 bg-white text-navy border-2 border-navy rounded-full font-medium hover:bg-navy hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
             >
               View All Projects
-            </button> -->
-          </a>
+            </button>
+          </a> -->
         </div>
       </div>
     </section>
@@ -634,7 +589,7 @@
               <span class="w-20 h-[2px] bg-navy mb-1"></span>
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
-            <h2 class="text-4xl font-bold font-italiana text-navy">
+            <h2 class="text-3xl sm:text-4xl font-bold font-italiana text-navy">
               Why Choose Prospecta Build X
             </h2>
             <div class="flex flex-col items-start">
@@ -642,22 +597,28 @@
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
           </div>
-          <p class="text-gray-600 font-nunito max-w-2xl mx-auto mt-4">
+          <p
+            class="text-gray-600 font-nunito max-w-2xl mx-auto mt-4 text-sm sm:text-base"
+          >
             We deliver excellence through innovation, quality, and
             customer-centric approach
           </p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+        >
           <div class="text-center">
             <div
               class="bg-purple/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
             >
               <i class="fas fa-award text-purple text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+            <h3
+              class="text-lg sm:text-xl font-bold font-semibold text-navy mb-2"
+            >
               Quality Construction
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 text-sm sm:text-base">
               Premium materials and superior craftsmanship in every project
             </p>
           </div>
@@ -667,10 +628,12 @@
             >
               <i class="fas fa-clock text-purple text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+            <h3
+              class="text-lg sm:text-xl font-bold font-semibold text-navy mb-2"
+            >
               Timely Delivery
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 text-sm sm:text-base">
               Committed to delivering projects on schedule without compromise
             </p>
           </div>
@@ -680,10 +643,12 @@
             >
               <i class="fas fa-handshake text-purple text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+            <h3
+              class="text-lg sm:text-xl font-bold font-semibold text-navy mb-2"
+            >
               Customer Support
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 text-sm sm:text-base">
               24/7 customer service and after-sales support
             </p>
           </div>
@@ -693,10 +658,12 @@
             >
               <i class="fas fa-leaf text-purple text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold font-semibold text-navy mb-2">
+            <h3
+              class="text-lg sm:text-xl font-bold font-semibold text-navy mb-2"
+            >
               Eco-Friendly
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600 text-sm sm:text-base">
               Sustainable construction practices and green building solutions
             </p>
           </div>
@@ -732,7 +699,7 @@
               <span class="w-20 h-[2px] bg-cream mb-1"></span>
               <span class="w-10 h-[1px] bg-white"></span>
             </div>
-            <h2 class="text-4xl font-bold font-italiana text-white">
+            <h2 class="text-3xl sm:text-4xl font-bold font-italiana text-white">
               The Prospecta Build X-Factor
             </h2>
             <div class="flex flex-col items-start">
@@ -740,22 +707,24 @@
               <span class="w-10 h-[1px] bg-white"></span>
             </div>
           </div>
-          <p class="text-xl max-w-3xl font-nunito mx-auto mt-4 text-white/90">
+          <p
+            class="text-lg sm:text-xl max-w-3xl font-nunito mx-auto mt-4 text-white/90"
+          >
             What sets us apart in the competitive real estate landscape
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div class="text-center">
             <div
               class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
             >
               <i class="fas fa-lightbulb text-cream text-3xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold font-italiana mb-4">
+            <h3 class="text-xl sm:text-2xl font-semibold font-italiana mb-4">
               Innovation
             </h3>
-            <p class="text-white/90">
+            <p class="text-white/90 text-sm sm:text-base">
               Cutting-edge design and smart home technology integration
             </p>
           </div>
@@ -765,10 +734,10 @@
             >
               <i class="fas fa-shield-alt text-cream text-3xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold font-italiana mb-4">
+            <h3 class="text-xl sm:text-2xl font-semibold font-italiana mb-4">
               Sustainability
             </h3>
-            <p class="text-white/90">
+            <p class="text-white/90 text-sm sm:text-base">
               LEED certified buildings with renewable energy solutions
             </p>
           </div>
@@ -778,8 +747,10 @@
             >
               <i class="fas fa-users text-cream text-3xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold font-italiana mb-4">Community</h3>
-            <p class="text-white/90">
+            <h3 class="text-xl sm:text-2xl font-semibold font-italiana mb-4">
+              Community
+            </h3>
+            <p class="text-white/90 text-sm sm:text-base">
               Building communities that foster connection and well-being
             </p>
           </div>
@@ -802,7 +773,7 @@
               <span class="w-16 h-[2px] bg-navy mb-1"></span>
               <span class="w-8 h-[1px] bg-navy"></span>
             </div>
-            <h2 class="text-3xl font-bold font-italiana text-navy">
+            <h2 class="text-2xl sm:text-3xl font-bold font-italiana text-navy">
               Awards & Recognition
             </h2>
             <div class="flex flex-col items-start">
@@ -814,7 +785,9 @@
 
         <!-- Cards -->
         <div class="relative mb-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4"
+          >
             <!-- Card 1 -->
             <div
               class="bg-[#0D0D30] rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-gold transform hover:-translate-y-1"
@@ -827,12 +800,12 @@
                 </div>
                 <div>
                   <span class="text-xs text-purple">2023 Winner</span>
-                  <h3 class="text-lg font-bold text-white">
+                  <h3 class="text-base sm:text-lg font-bold text-white">
                     CONNECT 3.0 KOHINOOR
                   </h3>
                 </div>
               </div>
-              <p class="text-gray-200 text-sm mb-3 leading-snug">
+              <p class="text-gray-200 text-xs sm:text-sm mb-3 leading-snug">
                 Recognized for excellence in innovative residential developments
                 at the Real Estate Excellence Awards
               </p>
@@ -851,12 +824,12 @@
                 </div>
                 <div>
                   <span class="text-xs text-purple">2022 Winner</span>
-                  <h3 class="text-lg font-bold text-white">
+                  <h3 class="text-base sm:text-lg font-bold text-white">
                     BLINDWINK GLOBAL ICON AWARD
                   </h3>
                 </div>
               </div>
-              <p class="text-gray-200 text-sm mb-3 leading-snug">
+              <p class="text-gray-200 text-xs sm:text-sm mb-3 leading-snug">
                 Most trusted Turnkey Construction & Infra Construction
               </p>
               <span class="text-xs text-gray-400"> 2022</span>
@@ -874,10 +847,12 @@
                 </div>
                 <div>
                   <span class="text-xs text-purple"> KOHINOOR</span>
-                  <h3 class="text-lg font-bold text-white">CONNECT 2.0</h3>
+                  <h3 class="text-base sm:text-lg font-bold text-white">
+                    CONNECT 2.0
+                  </h3>
                 </div>
               </div>
-              <p class="text-gray-200 text-sm mb-3 leading-snug">
+              <p class="text-gray-200 text-xs sm:text-sm mb-3 leading-snug">
                 Biggest Value of Work Order Awards
               </p>
               <span class="text-xs text-gray-400">January 2024</span>
@@ -897,7 +872,7 @@
               <span class="w-20 h-[2px] bg-navy mb-1"></span>
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
-            <h2 class="text-4xl font-bold font-italiana text-navy">
+            <h2 class="text-3xl sm:text-4xl font-bold font-italiana text-navy">
               Our Trusted Partners
             </h2>
             <div class="flex flex-col items-start">
@@ -905,16 +880,16 @@
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
           </div>
-          <p class="text-navy mt-4">
+          <p class="text-navy mt-4 text-sm sm:text-base">
             Working with industry leaders to deliver excellence
           </p>
         </div>
 
         <!-- Client Logos -->
-        <div class="relative">
-          <div class="flex space-x-12 scroll-container">
+        <div class="relative overflow-hidden">
+          <div class="flex space-x-6 sm:space-x-12 scroll-container">
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client1.png"
@@ -922,9 +897,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client2.png"
@@ -932,9 +906,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client3.png"
@@ -942,9 +915,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client4.png"
@@ -952,9 +924,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client5.png"
@@ -962,9 +933,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client6.png"
@@ -972,9 +942,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client7.png"
@@ -982,9 +951,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client8.png"
@@ -992,9 +960,8 @@
                 class="max-h-full max-w-full object-contain"
               />
             </div>
-
             <div
-              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-56 h-32 flex items-center justify-center"
+              class="flex-shrink-0 bg-gray-100 rounded-lg p-4 w-48 sm:w-56 h-28 sm:h-32 flex items-center justify-center"
             >
               <img
                 src="./Images/client9.png"
@@ -1016,7 +983,7 @@
               <span class="w-20 h-[2px] bg-gold mb-1"></span>
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
-            <h2 class="text-4xl font-bold font-italiana text-navy">
+            <h2 class="text-3xl sm:text-4xl font-bold font-italiana text-navy">
               Contact Us
             </h2>
             <div class="flex flex-col items-start">
@@ -1024,65 +991,95 @@
               <span class="w-10 h-[1px] bg-navy"></span>
             </div>
           </div>
-          <p class="text-navy font-nunito max-w-2xl mx-auto mt-4">
+          <p
+            class="text-navy font-nunito max-w-2xl mx-auto mt-4 text-sm sm:text-base"
+          >
             Get in touch with us for inquiries or project details
           </p>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-            <h3 class="text-xl font-bold mb-4 text-navy">Contact Info</h3>
+            <h3 class="text-lg sm:text-xl font-bold mb-4 text-navy">
+              Contact Info
+            </h3>
             <div class="space-y-3">
               <div class="flex items-center">
                 <i class="fas fa-map-marker-alt mr-3 text-navy"></i>
                 <a
                   href="https://maps.app.goo.gl/bYewAzbBrubnYdRb6"
                   target="_blank"
-                  class="text-navy hover:underline"
+                  class="text-navy hover:underline text-sm sm:text-base"
                 >
                   PUNE OFFICE C-803, AMAR BUSINESS ZONE, BANER, PUNE-411045
                 </a>
               </div>
+              <div class="flex flex-col space-y-2">
+                <!-- First Phone Number -->
+                <div class="flex items-center">
+                  <i class="fas fa-phone mr-3 text-navy"></i>
+                  <a
+                    href="tel:+919549543838"
+                    class="text-navy text-sm sm:text-base hover:text-blue-700"
+                  >
+                    +91 95495 43838
+                  </a>
+                </div>
 
-              <div class="flex items-center">
-                <i class="fas fa-phone mr-3 text-navy"></i>
-                <span class="text-navy">+91 95495 43838 </span>
-              </div>
-              <div class="flex items-center">
-                <i class="fas fa-envelope mr-3 text-navy"></i>
-                <span class="text-navy">info@prospectabuildx.com</span>
+                <!-- Second Phone Number -->
+                <div class="flex items-center">
+                  <i class="fas fa-phone mr-3 text-navy"></i>
+                  <a
+                    href="tel:+918956229547"
+                    class="text-navy text-sm sm:text-base hover:text-blue-700"
+                  >
+                    +91 89562 29547
+                  </a>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-center">
+                  <i class="fas fa-envelope mr-3 text-navy"></i>
+                  <a
+                    href="mailto:info@prospectabuildx.com"
+                    class="text-navy text-sm sm:text-base hover:text-blue-700"
+                  >
+                    info@prospectabuildx.com
+                  </a>
+                </div>
               </div>
             </div>
             <div class="mt-6">
-              <h3 class="text-xl font-bold mb-4 text-navy">Follow Us</h3>
+              <h3 class="text-lg sm:text-xl font-bold mb-4 text-navy">
+                Follow Us
+              </h3>
               <div class="flex space-x-4">
                 <a
                   href="https://www.facebook.com/prospectabuildx"
-                  class="text-white/80 hover:text-beige"
+                  class="text-white/80 hover:text-blue-700"
                 >
                   <i class="fab fa-facebook text-navy text-xl"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/prospectabuildx/"
-                  class="text-white/80 hover:text-beige"
+                  class="text-white/80 hover:text-blue-700"
                 >
                   <i class="fab fa-instagram text-navy text-xl"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/company/prospectabuildx/"
-                  class="text-white/80 hover:text-beige"
+                  class="text-white/80 hover:text-blue-700"
                 >
                   <i class="fab fa-linkedin text-navy text-xl"></i>
                 </a>
-                <!-- <a href="#" class="text-navy hover:text-gold">
-                  <i class="fab fa-twitter text-xl"></i>
-                </a> -->
               </div>
             </div>
           </div>
 
           <div>
-            <h3 class="text-xl font-bold mb-4 text-navy">Send Us a Message</h3>
-            <form id="contact-form" class="space-y-4">
+            <h3 class="text-lg sm:text-xl font-bold mb-4 text-navy">
+              Send Us a Message
+            </h3>
+            <div class="space-y-4">
               <input
                 type="text"
                 name="user_name"
@@ -1109,7 +1106,7 @@
               >
                 Send Message
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -1118,7 +1115,9 @@
     <!-- Footer -->
     <footer class="bg-navy text-white py-14">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12"
+        >
           <!-- Logo + Description -->
           <div>
             <img
@@ -1126,13 +1125,10 @@
               alt="Footer Logo"
               class="h-14 mb-6 object-contain"
             />
-
-            <p class="text-white/80 mb-6 leading-relaxed">
+            <p class="text-white/80 mb-6 leading-relaxed text-sm sm:text-base">
               Building dreams, creating communities, and delivering excellence
               in Industrial development.
             </p>
-
-            <!-- Social Icons -->
             <div class="flex space-x-5">
               <a
                 href="https://www.facebook.com/prospectabuildx"
@@ -1160,8 +1156,8 @@
 
           <!-- Quick Links -->
           <div>
-            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
-            <ul class="space-y-3">
+            <h3 class="text-lg sm:text-xl font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3 text-sm sm:text-base">
               <li>
                 <a href="#home" class="text-white/80 hover:text-beige">Home</a>
               </li>
@@ -1190,8 +1186,8 @@
 
           <!-- Services -->
           <div>
-            <h3 class="text-xl font-bold mb-6">Services</h3>
-            <ul class="space-y-3">
+            <h3 class="text-lg sm:text-xl font-bold mb-6">Services</h3>
+            <ul class="space-y-3 text-sm sm:text-base">
               <li>
                 <a
                   href="services.html#construction"
@@ -1225,8 +1221,8 @@
 
           <!-- Contact Info -->
           <div>
-            <h3 class="text-xl font-bold mb-6">Contact Info</h3>
-            <div class="space-y-4">
+            <h3 class="text-lg sm:text-xl font-bold mb-6">Contact Info</h3>
+            <div class="space-y-4 text-sm sm:text-base">
               <div class="flex items-start">
                 <i class="fas fa-map-marker-alt mr-3 mt-1 text-white"></i>
                 <a
@@ -1238,7 +1234,6 @@
                   PUNE OFFICE C-803, AMAR BUSINESS ZONE, BANER, PUNE-411045
                 </a>
               </div>
-
               <div class="flex items-center">
                 <i class="fas fa-phone mr-3 text-white"></i>
                 <a
@@ -1247,7 +1242,6 @@
                   >+91 95495 43838</a
                 >
               </div>
-
               <div class="flex items-center">
                 <i class="fas fa-phone mr-3 text-white"></i>
                 <a
@@ -1256,7 +1250,6 @@
                   >+91 89562 29547</a
                 >
               </div>
-
               <div class="flex items-center">
                 <i class="fas fa-envelope mr-3 text-white"></i>
                 <a
@@ -1272,7 +1265,7 @@
 
         <!-- Bottom Bar -->
         <div class="border-t border-white/20 mt-12 pt-6 text-center">
-          <p class="text-white/80">
+          <p class="text-white/80 text-sm sm:text-base">
             &copy; 2025 Prospecta Build X. All rights reserved.
           </p>
         </div>
@@ -1282,7 +1275,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("lS4NzGusbDkqQQqdu"); // ✅ Your Public Key
+        emailjs.init("lS4NzGusbDkqQQqdu");
       })();
     </script>
     <script src="script.js"></script>
