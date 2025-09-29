@@ -74,27 +74,48 @@
     <!-- Top Header -->
     <div class="bg-navy text-white py-2 px-4">
       <div class="container mx-auto flex justify-between items-center text-sm">
-        <div class="flex space-x-4">
-          <span
-            ><i class="fas fa-envelope mr-2"></i>info@prospectabuildx.com</span
+        <!-- Contact Info -->
+        <div class="flex space-x-6">
+          <a
+            href="mailto:info@prospectabuildx.com"
+            class="hover:text-beige flex items-center"
           >
-          <span><i class="fas fa-phone mr-2"></i>+91 95495 43838</span>
+            <i class="fas fa-envelope mr-2"></i> info@prospectabuildx.com
+          </a>
+          <a
+            href="tel:+919549543838"
+            class="hover:text-beige flex items-center"
+          >
+            <i class="fas fa-phone mr-2"></i> +91 95495 43838
+          </a>
+
+          <a
+            href="tel:+91 89562 29547"
+            class="hover:text-beige flex items-center"
+          >
+            <i class="fas fa-phone mr-2"></i> +91 89562 29547
+          </a>
         </div>
-        <div class="flex space-x-3">
+
+        <!-- Social Icons -->
+        <div class="flex space-x-4">
           <a
             href="https://www.facebook.com/prospectabuildx"
+            target="_blank"
             class="text-white/80 hover:text-beige"
           >
             <i class="fab fa-facebook text-xl"></i>
           </a>
           <a
             href="https://www.instagram.com/prospectabuildx/"
+            target="_blank"
             class="text-white/80 hover:text-beige"
           >
             <i class="fab fa-instagram text-xl"></i>
           </a>
           <a
             href="https://www.linkedin.com/company/prospectabuildx/"
+            target="_blank"
             class="text-white/80 hover:text-beige"
           >
             <i class="fab fa-linkedin text-xl"></i>
@@ -365,7 +386,7 @@
             </p>
           </div>
         </div>
-        <div class="pt-6 border-t border-purple-100">
+        <!-- <div class="pt-6 border-t border-purple-100">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div
               class="p-4 text-center flex flex-col items-center justify-center"
@@ -428,7 +449,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -1095,9 +1116,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-navy text-white py-12">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-12">
+    <footer class="bg-navy text-white py-14">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
           <!-- Logo + Description -->
           <div>
             <img
@@ -1108,31 +1129,32 @@
 
             <p class="text-white/80 mb-6 leading-relaxed">
               Building dreams, creating communities, and delivering excellence
-              in real estate development.
+              in Industrial development.
             </p>
 
+            <!-- Social Icons -->
             <div class="flex space-x-5">
               <a
                 href="https://www.facebook.com/prospectabuildx"
-                class="text-white/80 hover:text-beige"
+                target="_blank"
+                class="text-white/80 hover:text-beige transition-colors"
               >
                 <i class="fab fa-facebook text-xl"></i>
               </a>
               <a
                 href="https://www.instagram.com/prospectabuildx/"
-                class="text-white/80 hover:text-beige"
+                target="_blank"
+                class="text-white/80 hover:text-beige transition-colors"
               >
                 <i class="fab fa-instagram text-xl"></i>
               </a>
               <a
                 href="https://www.linkedin.com/company/prospectabuildx/"
-                class="text-white/80 hover:text-beige"
+                target="_blank"
+                class="text-white/80 hover:text-beige transition-colors"
               >
                 <i class="fab fa-linkedin text-xl"></i>
               </a>
-              <!-- <a href="#" class="text-white/80 hover:text-beige">
-            <i class="fab fa-twitter text-xl"></i>
-          </a> -->
             </div>
           </div>
 
@@ -1171,22 +1193,30 @@
             <h3 class="text-xl font-bold mb-6">Services</h3>
             <ul class="space-y-3">
               <li>
-                <a href="#" class="text-white/80 hover:text-beige"
+                <a
+                  href="services.html#construction"
+                  class="text-white/80 hover:text-beige"
                   >Industrial Construction</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white/80 hover:text-beige"
+                <a
+                  href="services.html#mep"
+                  class="text-white/80 hover:text-beige"
                   >Mechanical & Electrical Plumbing</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white/80 hover:text-beige"
-                  >Pre - Engineered Building</a
+                <a
+                  href="services.html#peb"
+                  class="text-white/80 hover:text-beige"
+                  >Pre-Engineered Building</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white/80 hover:text-beige"
+                <a
+                  href="services.html#turnkey"
+                  class="text-white/80 hover:text-beige"
                   >Turnkey Project Execution</a
                 >
               </li>
@@ -1197,32 +1227,51 @@
           <div>
             <h3 class="text-xl font-bold mb-6">Contact Info</h3>
             <div class="space-y-4">
-              <div class="flex items-center">
-                <i class="fas fa-map-marker-alt mr-3 text-white"></i>
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt mr-3 mt-1 text-white"></i>
                 <a
                   href="https://maps.app.goo.gl/bYewAzbBrubnYdRb6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-white hover:underline"
+                  class="text-white/80 hover:underline leading-relaxed"
                 >
                   PUNE OFFICE C-803, AMAR BUSINESS ZONE, BANER, PUNE-411045
                 </a>
               </div>
 
               <div class="flex items-center">
-                <i class="fas fa-phone mr-3"></i>
-                <span class="text-white/80">+91 95495 43838</span>
+                <i class="fas fa-phone mr-3 text-white"></i>
+                <a
+                  href="tel:+919549543838"
+                  class="text-white/80 hover:underline"
+                  >+91 95495 43838</a
+                >
               </div>
+
               <div class="flex items-center">
-                <i class="fas fa-envelope mr-3"></i>
-                <span class="text-white/80">info@prospectabuildx.com</span>
+                <i class="fas fa-phone mr-3 text-white"></i>
+                <a
+                  href="tel:+918956229547"
+                  class="text-white/80 hover:underline"
+                  >+91 89562 29547</a
+                >
+              </div>
+
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-white"></i>
+                <a
+                  href="mailto:info@prospectabuildx.com"
+                  class="text-white/80 hover:underline"
+                >
+                  info@prospectabuildx.com
+                </a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-white/20 mt-10 pt-6 text-center">
+        <div class="border-t border-white/20 mt-12 pt-6 text-center">
           <p class="text-white/80">
             &copy; 2025 Prospecta Build X. All rights reserved.
           </p>
